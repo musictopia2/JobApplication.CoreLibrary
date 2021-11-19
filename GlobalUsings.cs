@@ -1,0 +1,9 @@
+﻿global using CommonBasicLibraries.DatabaseHelpers.Attributes;
+global using CommonBasicLibraries.DatabaseHelpers.EntityInterfaces;
+global using CommonBasicLibraries.CollectionClasses;
+global using JobApplication.CoreLibrary.Models;
+global using CommonBasicLibraries.BasicDataSettingsAndProcesses;
+global using aa = CommonBasicLibraries.BasicDataSettingsAndProcesses.ApplicationPath;
+global using bb = CommonBasicLibraries.BasicDataSettingsAndProcesses.BasicDataFunctions;
+global using ff = CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.FileFunctions.FileFunctions;
+global using jj = CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.JsonSerializers.FileHelpers;

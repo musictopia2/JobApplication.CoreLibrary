@@ -7,3 +7,5 @@ global using aa = CommonBasicLibraries.BasicDataSettingsAndProcesses.Application
 global using bb = CommonBasicLibraries.BasicDataSettingsAndProcesses.BasicDataFunctions;
 global using ff = CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.FileFunctions.FileFunctions;
 global using jj = CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.JsonSerializers.FileHelpers;
+global using JobApplication.CoreLibrary.Logic;
+global using JobApplication.CoreLibrary.Services;

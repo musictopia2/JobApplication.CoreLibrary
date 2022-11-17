@@ -1,0 +1,19 @@
+﻿@inherits PageComponentBase
+@if (DataContext.CurrentJobApplication is null)
+{
+    <div>No job application</div>
+    return;
+}
+<div class="largerfont">
+    @DataContext.CurrentJobApplication.PhoneNumber
+</div>
+<div class="largerfont">
+    @DataContext.CurrentJobApplication.EmailAddress
+</div>
+<div class="@css1.Bold">
+    School History
+</div>
+@foreach (var item in DataContext.CurrentJobApplication.Schools)
+{
+    <div>@item</div>
+}

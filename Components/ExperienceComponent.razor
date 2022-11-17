@@ -1,0 +1,19 @@
+﻿@inherits PageComponentBase
+@if (DataContext.CurrentJobApplication is null)
+{
+    <div>No Job Application Found</div>
+    return;
+}
+<CarouselBasicList RenderList="DataContext.CurrentJobApplication.Experiences" Context="Experience">
+    <GridTwoColumnUnlimited>
+        <LabelPairComponent HeaderText="Company Name" MainText="@Experience.CompanyName" />
+        <LabelPairComponent HeaderText="Company Address" MainText="@Experience.CompanyAddress" />
+        <LabelPairComponent HeaderText="Phone Number" MainText="@Experience.PhoneNumber" />
+        <LabelPairComponent HeaderText="Supervisor's Name" MainText="@Experience.SupervisorName" />
+        <LabelPairComponent HeaderText="Job Title" MainText="@Experience.JobTitle" />
+        <LabelPairComponent HeaderText="Job Duties" MainText="@Experience.JobDuties" />
+        <LabelPairComponent HeaderText="Date From" MainText="@Experience.DateFrom" />
+        <LabelPairComponent HeaderText="Date To" MainText="@Experience.DateTo" />
+        <LabelPairComponent HeaderText="Reason For Leaving" MainText="@Experience.ReasonForLeaving" />
+    </GridTwoColumnUnlimited>
+</CarouselBasicList>

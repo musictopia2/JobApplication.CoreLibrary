@@ -1,0 +1,42 @@
+﻿@using BasicBlazorLibrary.Components.NavigationMenus
+@if (DataContext is null)
+{
+    <div>
+        No view model was found
+    </div>
+    return;
+}
+@* 
+    
+unable to collapse the pages.
+    otherwise, the carousels don't work because there is more than one even though one is hidden at the moment.
+*@
+
+<NavigationBarContainer AlwaysShowBar="true"
+                        MenuList="_menus"
+                        MenuWidth="90vw"
+                        Title="@DataContext.Title">
+    <MainContent>
+        @if (DataContext.IsBusy)
+        {
+            <div>Downloading Job Application</div>
+            return;
+        }
+        @if (DataContext.CurrentJobApplication is null)
+        {
+            <div>Needs to download the job application</div>
+            return;
+        }
+        <NavigationTabContainer>
+            <NavigationPage Text="Main">
+                <MainComponent DataContext="DataContext" />
+            </NavigationPage>
+            <NavigationPage Text="Job Experience">
+                <ExperienceComponent DataContext="DataContext" />
+            </NavigationPage>
+            <NavigationPage Text="References">
+                <ReferencesComponent DataContext="DataContext" />
+            </NavigationPage>
+        </NavigationTabContainer>
+    </MainContent>
+</NavigationBarContainer>

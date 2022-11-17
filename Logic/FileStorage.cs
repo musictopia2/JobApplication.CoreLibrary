@@ -5,13 +5,13 @@ public class FileStorage : IStorage
     private readonly string _applicationPath = "job application.json";
     public FileStorage()
     {
-        if (bb.OS == bb.EnumOS.Android)
+        if (bb1.OS == bb1.EnumOS.Android)
         {
-            _applicationPath = Path.Combine(ff.GetApplicationDataForMobileDevices(), _applicationPath);
+            _applicationPath = Path.Combine(ff1.GetApplicationDataForMobileDevices(), _applicationPath);
         }
-        else if (bb.OS == bb.EnumOS.WindowsDT)
+        else if (bb1.OS == bb1.EnumOS.WindowsDT)
         {
-            _applicationPath = Path.Combine(aa.GetApplicationPath(), _applicationPath);
+            _applicationPath = Path.Combine(aa1.GetApplicationPath(), _applicationPath);
         }
         else
         {
@@ -20,14 +20,14 @@ public class FileStorage : IStorage
     }
     JobApplicationModel? IStorage.GetJobApplication()
     {
-        if (ff.FileExists(_applicationPath) == false)
+        if (ff1.FileExists(_applicationPath) == false)
         {
             return null;
         }
-        return jj.RetrieveSavedObject<JobApplicationModel>(_applicationPath);
+        return jj1.RetrieveSavedObject<JobApplicationModel>(_applicationPath);
     }
     void IStorage.SaveJobApplication(JobApplicationModel model)
     {
-        jj.SaveObject(_applicationPath, model); //has to not be async  otherwise, the desktop version does not work well.
+        jj1.SaveObject(_applicationPath, model); //has to not be async  otherwise, the desktop version does not work well.
     }
 }

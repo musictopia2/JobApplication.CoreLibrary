@@ -6,12 +6,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Version>7.0.2</Version>
+	<Version>8.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommonBasicLibraries" Version="8.0.1" />
-	  <PackageReference Include="BasicBlazorLibrary" Version="8.0.1" />
+    <PackageReference Include="AdoNetHelpersGenerators" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="CommonBasicLibraries" Version="8.0.28" />
+	  <PackageReference Include="BasicBlazorLibrary" Version="8.0.7" />
 	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
   </ItemGroup>
 

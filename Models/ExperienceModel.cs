@@ -1,6 +1,6 @@
 ﻿namespace JobApplication.CoreLibrary.Models;
 [Table("ExperienceTable")]
-public class ExperienceModel : ISimpleDapperEntity
+public partial class ExperienceModel : ISimpleDatabaseEntity
 {
     public int ID { get; set; }
     public string CompanyName { get; set; } = "";

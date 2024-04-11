@@ -1,5 +1,4 @@
-﻿global using CommonBasicLibraries.DatabaseHelpers.Attributes;
-global using CommonBasicLibraries.DatabaseHelpers.EntityInterfaces;
+﻿global using CommonBasicLibraries.DatabaseHelpers.EntityInterfaces;
 global using CommonBasicLibraries.CollectionClasses;
 global using JobApplication.CoreLibrary.Models;
 global using CommonBasicLibraries.BasicDataSettingsAndProcesses;
@@ -13,3 +12,4 @@ global using JobApplication.CoreLibrary.ViewModels;
 global using Microsoft.AspNetCore.Components;
 global using System.Diagnostics.CodeAnalysis;
 global using BasicBlazorLibrary.Components.NavigationMenus;
+global using System.ComponentModel.DataAnnotations.Schema;

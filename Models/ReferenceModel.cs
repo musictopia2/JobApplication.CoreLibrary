@@ -1,6 +1,6 @@
 ﻿namespace JobApplication.CoreLibrary.Models;
 [Table("ReferenceTable")]
-public class ReferenceModel : ISimpleDapperEntity
+public partial class ReferenceModel : ISimpleDatabaseEntity
 {
     public int ID { get; set; }
     public string FullName { get; set; } = "";
